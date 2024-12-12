@@ -1,0 +1,126 @@
+.dashboard {
+    padding: 20px;
+    font-family: Calibri;
+    background-color: #f5f6fa;
+  }
+  
+  .icon-header-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-header-image {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Make sure to maintain aspect ratio */
+    margin-right: 15px; /* Adds space between image and text */
+    border-radius: 8px; /* Optional: rounded corners */
+  }
+
+  .header-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Adjust color as needed */   
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.2), -5px -5px 30px rgba(255, 255, 255, 0.8);
+    background: linear-gradient(145deg, #f1f1f1, #e0e0e0);
+  }
+  
+  /* .card img:hover {
+    transform: rotate(10deg);
+    transition: transform 0.2s ease-in-out;
+  } */
+  
+  .card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #666;
+  }
+
+
+  .borewell-status {
+    font-family: Arial, sans-serif;
+    padding: 0px;
+  }
+  
+  .flow-text {
+    font-weight: bold;
+    margin-bottom: 5px;
+    /* color: black !important; */
+  }
+  
+  .status-text {
+    margin-left: -40px;
+    font-weight: bold;
+    /* color: black !important; */
+  }
+  
+  .status-icon {
+    margin-left: 8px; /* Space between 'Status:' and the icon */
+    font-size: 12px; /* Adjust icon size */
+  }
+  
+  .status-text-icon{
+    background-color: orange;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .status-icon.idle {
+    color: orange; /* Sets color for the Idle status icon */
+  }
+
+  .power-consumption {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+  }
+
+  .power-consumption-units{
+    font-size: 20px;
+  }
+  
+  .voltage {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .blinkingstatus {
+    animation: blink-animation 1s infinite; /* Apply blinking animation */
+  }
+  
+  @keyframes blink-animation {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5; /* Half-transparent at the midpoint */
+    }
+  }

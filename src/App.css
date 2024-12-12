@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: 'Calibri';
+  background-color: white;
+}
+
+.app-container {
+  display: flex;
+}
+
+.menu {
+  background: linear-gradient(to bottom, #4c67ff, #a276ff);
+  color: white;
+  padding: 1rem;
+  width: 200px;
+  position: fixed;
+  left: -200px;
+  top: 0;
+  height: 100%;
+  transition: left 0.3s ease;
+}
+
+.menu.open {
+  left: 0;
+}
+
+.menu nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+
+.menu nav a:hover {
+  transform: scale(1.1);
+}
+
+.menu-toggle {
+  background: white;
+  border: none;
+  color: #4c67ff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.content {
+  margin-left: 0;
+  margin-top: 20px;
+  flex: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.content.menu-open {
+  margin-left: 200px;
+}
+
+.component-container {
+  font-size: 24px;
+  text-align: center;
+  padding: 2rem;
+}
+
+.app {
+  display: flex;
+  height: 100vh; /* Ensure the full viewport height is used */
+  width: 100vw; /* Ensure the full viewport width is used */
+  overflow: hidden; /* Prevent scrollbars from appearing unexpectedly */
+}
+
+.sidebar {
+  width: 250px; 
+  background: #2c3e50;
+  color: white;
+  flex-shrink: 0; 
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1; 
+}
+
+.main-content {
+  margin-left: 250px; /* Add a margin equal to the sidebar width */
+  padding: 20px; /* Add padding to the main content */
+  flex: 1; /* Allow main content to expand */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  background: #f4f4f9; /* Light background for the content */
+}
